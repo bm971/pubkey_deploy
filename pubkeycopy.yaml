@@ -1,5 +1,5 @@
 ---
-- name: Copy public key to remote host for users
+- name: Copy public key to ansible host for users
   hosts: all
   gather_facts: false
 
@@ -8,14 +8,12 @@
       run_once: true
       debug:
         msg: "VARJAL TURELMESEN AMIG NEM VEGEZ, TOBB PERCIG IS ELTARTHAT!!!!!!!!!!!!!!!"
-        
+
     - name: Ping host (this will create the home folder)
-      become: true
-      become_user: "{{ filename }}"
       ping:
 
     - name: Set authorized key taken from file
       ansible.posix.authorized_key:
-        user: "{{ filename }}"
+        user: "{{ ansible_user }}"
         state: present
-        key: "{{ lookup('file', '/{{ filepath }}/{{ filename }}') }}"
+        key: "{{ lookup('file', '{{ filepath }}') }}"

@@ -3,4 +3,4 @@ host2
 host3
 
 [all:vars]
-filepath=/path/to/pubkey_deploy/users
+filepath=/home/MYUSER/.ssh/id_ed25519.pub
