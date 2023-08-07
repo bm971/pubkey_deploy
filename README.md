@@ -8,7 +8,7 @@ A pubkey_starter.sh indításával pingeli a hostokat (ezzel létrejön a home k
 Csak olyan hostokon működik, ahol azonos a jelszó!!!
 
 **Letöltés (abba a mappába, ahol éppen állsz):**
-```git clone ssh://git@bitbucket.idomsoft.hu:7999/~bakonyim/pubkey_deploy.git```
+```git clone git@github.com:bm971/pubkey_deploy.git```
 
 **HASZNÁLAT ELŐTT:**
 
@@ -23,8 +23,6 @@ Csak olyan hostokon működik, ahol azonos a jelszó!!!
 - **szükséges package: sshpass ```sudo apt install sshpass -y```**
 
 - **szükséges: local és remote gépen ansible és python telepítve legyen. Ellenőrzés:```ansible --version```**
-
-- **szükséges még: Galambos Dávid ssh configja https://confluence.idomsoft.hu/pages/viewpage.action?pageId=48891199**
 
 **HASZNÁLAT:**
 - WSL-ből vagy a jumpról ahonnan eléred a hostokat (MobaXterm local terminálban nincs telepítve se a python sem az ansible, ha ezeket megcsináljátok, utána ott is működnie kell)
