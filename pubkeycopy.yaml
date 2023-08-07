@@ -4,20 +4,15 @@
   gather_facts: false
 
   tasks:
-    - name: Display username (which is equal to the given filename)
+    - name: Display instruction
+      run_once: true
       debug:
-        msg: "username: {{ filename }}"
-
-    - name: Add the user with a bash shell (make sure that home folder is created)
-      ansible.builtin.user:
-        name: "{{ filename }}"
-        shell: /bin/bash
-        groups: students
-
-    # - name: Ping host
-    #   become: true
-    #   become_user: {{ filename }}
-    #   ping:
+        msg: "VARJAL TURELMESEN AMIG NEM VEGEZ, TOBB PERCIG IS ELTARTHAT!!!!!!!!!!!!!!!"
+        
+    - name: Ping host (this will create the home folder)
+      become: true
+      become_user: "{{ filename }}"
+      ping:
 
     - name: Set authorized key taken from file
       ansible.posix.authorized_key:

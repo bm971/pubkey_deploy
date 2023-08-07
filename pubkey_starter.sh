@@ -7,6 +7,6 @@ for file in users/*; do
   if [ -f "$file" ]; then
     username=$(echo $file | cut -c7-)
     echo "username: $username"
-    ansible-playbook -e "filename=$username" pubkeycopy.yaml # HA ping-et használsz kell ez is: --ask-pass (sshpass telepitve kell legyen)
+    ansible-playbook -e "filename=$username" pubkeycopy.yaml # if sudo password is required, start playbook with --ask-become-pass
   fi
 done
