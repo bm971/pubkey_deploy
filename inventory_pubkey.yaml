@@ -1,0 +1,6 @@
+host1
+host2
+host3
+
+[all:vars]
+filepath=/path/to/pubkey_deploy/users
