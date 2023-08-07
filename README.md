@@ -3,7 +3,7 @@ A fájlnév a user neve, a fájl tartalmazza a publikus kulcsot. **Nem szabad f�
 
 A pubkey_starter.sh indításával végigmegy az összes useren és az összes inventory_pubkey.yaml fájlban megadott hoston létrehozza őket (és a home könyvtárukat) amennyiben nem léteznek és feltölti a kulcsukat amennyiben még nincs feltöltve.
 
-Klónozás: ```git clone ssh://git@bitbucket.idomsoft.hu:7999/~bakonyim/pubkey_deploy.git```
+Klónozás: ```git clone git@github.com:bm971/pubkey_deploy.git```
 
 **HASZNÁLAT ELŐTT:**
 
@@ -18,8 +18,6 @@ Klónozás: ```git clone ssh://git@bitbucket.idomsoft.hu:7999/~bakonyim/pubkey_d
 - **szükséges ansible modul: posix ```ansible-galaxy collection install ansible.posix```**
 
 - **szükséges: local és remote gépeken ansible és python telepítve legyen. Ellenőrzés:```ansible --version```**
-
-- **szükséges még: Galambos Dávid ssh configja https://confluence.idomsoft.hu/pages/viewpage.action?pageId=48891199**
 
 - **ha kell sudo jelszó, akkor a pubkey_starter.sh-ban a playbookot a --ask-become-pass kapcsolóval kell indítani**
 
